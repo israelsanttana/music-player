@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh; /* use 100% of the height of the viewport */
+  display: grid;
+  place-items: center;
+  background: url(./assets/jane-duursma-CWEuo_qZsrI-unsplash.jpg) center
+    center/cover;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.case {
+  width: 25rem;
+  height: 40rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10em #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.case-buttons {
+  display: flex;
+  margin: 5rem;
+}
+
+.next,
+.play,
+.back {
+  border: 1px solid #000;
+  width: 5rem;
+  height: 5rem;
+}
