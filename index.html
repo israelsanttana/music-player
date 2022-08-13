@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Music Player</title>
   </head>
   <body>
     <div class="container">
       <div class="case">
-        <div class="front cover">
+        <div class="front-cover">
           <img
             src="./assets/bruno-guerrero-GPqUnd1C9zc-unsplash.jpg"
             alt=""
@@ -18,13 +24,33 @@
             height="300"
           />
         </div>
-        <progress></progress>
+        <div class="name-song">
+          <h2>Muleque Doido</h2>
+          <p class="artist">Projota</p>
+        </div>
+        <div class="duration">
+          <div class="progression">
+            <progress value="0" max="1"></progress>
+            <div class="score"></div>
+          </div>
+          <div class="time">
+            <p class="initial">0:00</p>
+            <p class="final">3:40</p>
+          </div>
+        </div>
         <div class="case-buttons">
-          <div class="next"></div>
-          <div class="play"></div>
-          <div class="back"></div>
+          <div id="back">
+            <i><img src="./assets/play-back-outline.svg" alt="" /></i>
+          </div>
+          <div id="play">
+            <i><img src="./assets/play-outline.svg" alt="" /></i>
+          </div>
+          <div id="next">
+            <i><img src="./assets/play-forward-outline.svg" alt="" /></i>
+          </div>
         </div>
       </div>
     </div>
+    <audio src="./music/04 Muleque Doido.mp3"></audio>
   </body>
 </html>
