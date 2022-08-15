@@ -47,9 +47,32 @@ img {
   padding-top: 5px;
 }
 
+.progression {
+  width: 250px;
+  height: 6px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+progress {
+  width: 20%;
+  height: 6px;
+  background-color: #000;
+}
+
+.score {
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  border-radius: 100%;
+}
+
 .time {
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
 }
 
 .case-buttons {
@@ -58,8 +81,14 @@ img {
 
 #next,
 #back,
-#play {
+#play,
+#pause {
   width: 4rem;
   height: 4rem;
   margin: 1rem;
+  cursor: pointer;
+}
+
+#pause {
+  display: none;
 }
