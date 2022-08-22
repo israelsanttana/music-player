@@ -1,9 +1,10 @@
 
 let songs = [
-    {title:'Projeção', artist:'Artista', src:'music/Projeção.mp3', img:'image/projecao.jpg'},
-    {title:'Muleque Doido', artist:'Artista1', src:'music/Muleque Doido.mp3', img:'image/projecaoParaElas.jpg'},
-    {title:'Nóiz', artist:'Artista2', src:'music/Nóiz.mp3', img:'image/cartasAosMeus.jpg'}
+    {title:'Projeção', artist:'Projota', src:'music/Projeção.mp3', img:'./image/projecao.jpg'},
+    {title:'Muleque Doido', artist:'Projota', src:'music/Muleque Doido.mp3', img:'./image/projecaoParaElas.jpg'},
+    {title:'Nóiz', artist:'Projota', src:'./music/Nóiz.mp3', img:'./image/cartasAosMeus.jpg'}
 ];
+// console.log(songs);
 
 
 let music = document.querySelector('audio');
@@ -11,16 +12,17 @@ let indexMusic = 0;
 let musicDuration = document.querySelector('.final');
 let wallpaper = document.querySelector('.front-cover');
 let musicName = document.querySelector('.name-song h2');
-let artistName = document.querySelector('.artist p');
+let artistName = document.querySelector('.artist ');
 
-musicDuration.textContent = secondsToMinutes (Math.floor(music.duration));
+
+musicDuration.textContent = secondsToMinutes(Math.floor(music.duration));
+
 
 renderMusic(indexMusic);
+playMusic();
 
 
-
-
-document.querySelector('#play').addEventListener('click', playerMusic);
+document.querySelector('#play').addEventListener('click', playMusic);
 document.querySelector('#pause').addEventListener('click', pauseMusic);
 music.addEventListener('timeupdate', barUpdate);
 
@@ -48,14 +50,14 @@ function renderMusic(index){
         musicName.textContent = songs[index].title;
         artistName.textContent = songs[index].artist;
         wallpaper.src = songs[index].img;
-        musicDuration.textContent = secondsToMinutes (Math.floor(music.duration));
+        musicDuration.textContent = secondsToMinutes(Math.floor(music.duration));
 
     });
 
 }
 
 
-function playerMusic(){
+function playMusic(){
     music.play()
     document.querySelector('#pause').style.display = 'block';
     document.querySelector('#play').style.display = 'none';
@@ -85,4 +87,5 @@ function secondsToMinutes(seconds){
     return minutesField+ ':' + secondsField;
 
 };
+
 
